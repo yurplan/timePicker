@@ -72,7 +72,7 @@
     }
     $tpDiv.append($tpList);
     // Append the timPicker to the body and position it.
-    $tpDiv.appendTo('body').hide();
+    $tpDiv.appendTo(settings.container).hide();
 
     // Store the mouse state, used by the blur event. Use mouseover instead of
     // mousedown since Opera fires blur before mousedown.
@@ -234,7 +234,8 @@
     endTime: new Date(0, 0, 0, 23, 30, 0),
     timeFormat: 'HH:mm',
     amDesignator: 'AM',
-    pmDesignator: 'PM'
+    pmDesignator: 'PM',
+    container: 'body',
   };
 
   // Private functions.
